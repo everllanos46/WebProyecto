@@ -1,0 +1,41 @@
+<div class="panel-header panel-header-sm">
+</div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title"> Asignaturas</h4>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table">
+              <thead class=" text-primary">
+                  <th>
+                      Codigo
+                  </th>
+                <th>
+                  Nombre
+                </th>
+                <th>
+                  Créditos
+                </th>
+                <th>
+                  Horas Semanales
+                </th>
+              </thead>
+              <tbody>
+                <tr *ngFor="let asignatura of asignaturas; index as i "> 
+                  <td> <a [routerLink]="['/verAsignaturas']" routerLinkActive="router-link-active" >{{ asignatura.codigo }}</a>
+                  </td>
+                    
+                    <td>{{asignatura.nombre }}</td>
+                    <td>{{ asignatura.creditos }}</td>
+                    <td>{{ asignatura.horas }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
